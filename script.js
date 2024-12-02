@@ -89,7 +89,7 @@ function updateTimer() {
     const elapsedTime = (currentTime - startTime) / 1000;
     document.getElementById('timer').textContent = `Time: ${elapsedTime.toFixed(1)} seconds`;
 
-    if (elapsedTime >= difficulties[difficulty] && elapsedTime < difficulties[difficulty] + 2) {
+    if (elapsedTime >= difficulties[difficulty] && elapsedTime < difficulties[difficulty] + 3) {
       playTingSound();
     }
   }
