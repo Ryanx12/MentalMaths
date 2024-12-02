@@ -5,6 +5,7 @@ let isTiming = false;
 let difficulty = 1; // 0 for easy, 1 for medium, 2 for hard, 3 for extreme
 const difficulties = [20, 15, 10, 6]; // Corresponding times for each difficulty level in seconds
 
+
 // Event listeners
 document.body.addEventListener('keydown', function(event) {
   if (event.code === 'Space') {
@@ -88,7 +89,7 @@ function updateTimer() {
     const elapsedTime = (currentTime - startTime) / 1000;
     document.getElementById('timer').textContent = `Time: ${elapsedTime.toFixed(1)} seconds`;
 
-    if (elapsedTime >= difficulties[difficulty]) {
+    if (elapsedTime == difficulties[difficulty]) {
       playTingSound();
     }
   }
